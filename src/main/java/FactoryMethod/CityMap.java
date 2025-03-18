@@ -1,7 +1,9 @@
+package FactoryMethod;
+
 import java.util.ArrayList;
 import java.util.List;
 
-public class CityMap extends Map{
+public class CityMap extends Map {
     private Tile tile;
 
     public CityMap(){

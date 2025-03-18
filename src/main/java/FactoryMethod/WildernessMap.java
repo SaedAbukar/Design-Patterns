@@ -1,5 +1,6 @@
+package FactoryMethod;
+
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
 
 public class WildernessMap extends Map {

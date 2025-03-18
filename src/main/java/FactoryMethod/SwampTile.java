@@ -1,4 +1,6 @@
-public class SwampTile implements Tile{
+package FactoryMethod;
+
+public class SwampTile implements Tile {
     private final char character = 'S';
     private final String type = "swamp";
     public char getCharacter() {

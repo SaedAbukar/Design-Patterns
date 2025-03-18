@@ -1,4 +1,6 @@
-public class WaterTile implements Tile{
+package FactoryMethod;
+
+public class WaterTile implements Tile {
     private final char character = 'W';
     private final String type = "water";
     public char getCharacter() {

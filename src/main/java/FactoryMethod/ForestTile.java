@@ -1,4 +1,6 @@
-public class ForestTile implements Tile{
+package FactoryMethod;
+
+public class ForestTile implements Tile {
     private final char character = 'F';
     private final String type = "forest";
     public char getCharacter() {
