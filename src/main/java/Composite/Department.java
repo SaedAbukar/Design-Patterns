@@ -3,11 +3,8 @@ package Composite;
 import java.util.ArrayList;
 
 public class Department extends Container {
-    private String name;
-    private ArrayList<Component> members;
     public Department(String name) {
-        this.name = name;
-        this.members = new ArrayList<>();
+        super(name);
     }
 
     public double getSalary() {
