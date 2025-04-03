@@ -7,7 +7,7 @@ public class SelectionSort implements Sorter{
     public SelectionSort(int[] arr) {
         this.arr = arr;
     }
-
+    // Source code https://www.geeksforgeeks.org/selection-sort-algorithm-2/
     @Override
     public void sort() {
         int n = this.arr.length;

@@ -6,7 +6,7 @@ public class InsertionSort implements Sorter{
     public InsertionSort(int arr[]) {
         this.arr = arr;
     }
-
+    // Source code Insertion Sort Algorithm
     @Override
     public void sort() {
         int n = arr.length;
