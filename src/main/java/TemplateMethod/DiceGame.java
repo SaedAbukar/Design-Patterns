@@ -52,6 +52,7 @@ public class DiceGame extends Game{
     @Override
     public void displayWinner() {
         System.out.printf("The winner is: %s. Points: %d%n", winner, points.get(winner));
+        System.out.println("\nFinal standings:");
         displayThePoints();
     }
 
