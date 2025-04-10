@@ -9,10 +9,10 @@ public class Memento implements IMemento {
     private boolean isSelected;
     private LocalDateTime date;
 
-    public Memento(int[] options, boolean isSelected, LocalDateTime date) {
+    public Memento(int[] options, boolean isSelected) {
         this.options = options.clone(); // Copy options array
         this.isSelected = isSelected;
-        this.date = date;
+        saveTimeStamp();
         System.out.println("Memento created");
     }
 
@@ -36,8 +36,7 @@ public class Memento implements IMemento {
     @Override
     public String toString() {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
-
         String dateTimeString = date.format(formatter);
-        return "Boxes: " + options[0] + options[1] + options[2] + " isSelected: " + String.valueOf(isSelected) + " TimeStamp: " + dateTimeString; // or any useful representation
+        return "Boxes: " + options[0] + options[1] + options[2] + ", isSelected: " + String.valueOf(isSelected) + ", TimeStamp: " + dateTimeString; // or any useful representation
     }
 }

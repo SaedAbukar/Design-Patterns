@@ -6,7 +6,6 @@ import java.time.LocalDateTime;
 public class Model {
     private int[] options = new int[3];
     private boolean isSelected;
-    private LocalDateTime date;
 
     public void setOption(int optionNumber, int choice) {
         System.out.println("optionNumber: " + optionNumber + " choice: " + choice);
@@ -33,8 +32,7 @@ public class Model {
 
     // method to save the state of the model
     public IMemento createMemento() {
-        date = LocalDateTime.now();
-        return new Memento(options, isSelected, date);
+        return new Memento(options, isSelected);
     }
 
     // method to restore the state of the model
@@ -43,8 +41,9 @@ public class Model {
         options = selectionMemento.getOptions();
         System.out.println("options: " + options[0] + " " + options[1] + " " + options[2]);
         isSelected = selectionMemento.isSelected();
-        date = selectionMemento.getDate();
+        LocalDateTime date = selectionMemento.getDate();
         System.out.println("isSelected: " + isSelected);
+        System.out.println("date: " + date);
         System.out.println("State restored");
     }
 }
