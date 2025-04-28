@@ -20,13 +20,14 @@ public class MapGenerator {
         int rand = random.nextInt(3);
         switch (rand) {
             case 0:
-                return new Tile(x, y, TileFactory.getTileType("desert", 'F'));
+                return TileInstanceFactory.createTile(x, y, "forest", 'F');
             case 1:
-                return new Tile(x, y, TileFactory.getTileType("forest", 'M'));
+                return TileInstanceFactory.createTile(x, y, "desert", 'D');
             case 2:
-                return new Tile(x, y, TileFactory.getTileType("water", 'W'));
+                return TileInstanceFactory.createTile(x, y, "water", 'W');
             default:
-                return new Tile(x, y, TileFactory.getTileType("forest", 'F'));
+                return TileInstanceFactory.createTile(x, y, "forest", 'F');
         }
     }
+
 }
