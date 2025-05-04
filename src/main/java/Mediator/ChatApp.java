@@ -6,7 +6,7 @@ import javafx.stage.Stage;
 public class ChatApp extends Application {
     @Override
     public void start(Stage primaryStage) {
-        ChatMediator mediator = new ChatMediator();
+        IChatMediator mediator = new ChatMediator();
         new ChatClient("Ronaldo", mediator);
         new ChatClient("Messi", mediator);
         new ChatClient("Neymar", mediator);

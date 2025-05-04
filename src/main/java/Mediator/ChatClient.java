@@ -6,14 +6,14 @@ import javafx.stage.Stage;
 
 public class ChatClient implements IChatClient {
     private String name;
-    private ChatMediator mediator;
+    private IChatMediator mediator;
 
     private TextArea chatArea = new TextArea();
     private ComboBox<String> recipientCombo = new ComboBox<>();
     private TextField messageField = new TextField();
     private Button sendButton = new Button("Send");
 
-    public ChatClient(String name, ChatMediator mediator) {
+    public ChatClient(String name, IChatMediator mediator) {
         this.name = name;
         this.mediator = mediator;
         mediator.registerClient(this);
